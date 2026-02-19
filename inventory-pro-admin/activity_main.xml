@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F3F4F6">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MI INVENTARIO"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#1F2937"
+        android:layout_marginBottom="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp">
+
+        <EditText android:id="@+id/pName" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Nombre" android:layout_marginBottom="4dp"/>
+        <EditText android:id="@+id/pSku" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="SKU" android:layout_marginBottom="4dp"/>
+        
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <EditText android:id="@+id/pPrice" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:hint="Precio €" android:inputType="numberDecimal"/>
+            <EditText android:id="@+id/pQty" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:hint="Stock" android:inputType="number"/>
+        </LinearLayout>
+
+        <Button android:id="@+id/btnAdd" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Añadir a Almacén" android:backgroundTint="#4F46E5" android:textColor="#FFFFFF" android:layout_marginTop="8dp"/>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lvProducts"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="#E5E7EB"
+        android:dividerHeight="1dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+        
+        <Button android:id="@+id/btnDownload" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Descargar CSV" android:backgroundTint="#10B981" android:textColor="#FFFFFF" android:layout_marginRight="4dp"/>
+        <Button android:id="@+id/btnLogout" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Salir" android:backgroundTint="#EF4444" android:textColor="#FFFFFF"/>
+    </LinearLayout>
+
+</LinearLayout>

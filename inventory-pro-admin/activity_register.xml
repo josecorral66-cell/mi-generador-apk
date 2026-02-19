@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="32dp"
+    android:gravity="center"
+    android:background="#F8FAFC">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NUEVA CUENTA"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#1F2937"
+        android:layout_marginBottom="32dp"/>
+
+    <EditText
+        android:id="@+id/etRegName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre completo"
+        android:layout_marginBottom="12dp"
+        android:padding="16dp"/>
+
+    <EditText
+        android:id="@+id/etRegEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:layout_marginBottom="12dp"
+        android:padding="16dp"/>
+
+    <EditText
+        android:id="@+id/etRegPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:layout_marginBottom="24dp"
+        android:padding="16dp"/>
+
+    <Button
+        android:id="@+id/btnDoRegister"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Registrar Operario"
+        android:backgroundTint="#10B981"
+        android:textColor="#FFFFFF"/>
+
+</LinearLayout>

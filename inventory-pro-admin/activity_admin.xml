@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#111827">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PANEL ADMINISTRADOR"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inventario Global de Operarios"
+        android:textColor="#9CA3AF"
+        android:textSize="12sp"
+        android:layout_marginBottom="8dp"/>
+
+    <ListView
+        android:id="@+id/lvAdminGlobal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#FFFFFF"
+        android:padding="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <Button android:id="@+id/btnAdminDownload" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Reporte Global CSV" android:backgroundTint="#6366F1" android:textColor="#FFFFFF" android:layout_marginRight="4dp"/>
+        <Button android:id="@+id/btnAdminOut" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Cerrar" android:backgroundTint="#F43F5E" android:textColor="#FFFFFF"/>
+    </LinearLayout>
+
+</LinearLayout>
