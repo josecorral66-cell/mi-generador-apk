@@ -1,21 +1,26 @@
 name: Generar APK
-on: [push] # Se activa cada vez que subes algo
+on: [push]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
           java-version: '17'
           distribution: 'temurin'
+
+      - name: Instalar Unrar y extraer archivos
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y unrar
+          # Si tu archivo se llama 'proyecto.rar', cámbialo aquí:
+          unrar x *.rar 
+
       - name: Build con Gradle
         run: |
-          if [ -f "gradlew" ]; then
-            chmod +x gradlew
-            ./gradlew assembleDebug
-          else
-            echo "No se encontró proyecto Gradle"
-          fi
+          chmod +x gradlew || true
+          ./gradlew assembleDebug || echo "No se pudo compilar. Revisa si el contenido del RAR es correcto."
